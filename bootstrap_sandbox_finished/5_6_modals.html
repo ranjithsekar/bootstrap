@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h1 class="display-3 text-center my-4">Text Alignment & Display</h1>
+    <h1 class="display-3 text-center my-4">Modals</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -79,66 +79,62 @@
   </header>
 
   <div class="container">
-    <!--########################START HERE#########################-->
+    <!--#################START HERE#####################-->
 
-    <!-- JUSTIFY -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ad deleniti, placeat cumque, maiores fugiat tenetur ea voluptas voluptatem odio odit, dicta. Eaque reiciendis sed placeat omnis doloribus, corrupti eius.</p>
+    <!-- MODAL TRIGGER -->
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Launch Modal</button>
 
-    <br><br>
-
-    <!-- ALIGNMENT -->
-    <p>Text aligned left</p>
-    <p>Text aligned center</p>
-    <p>Text aligned right</p>
-
-    <!-- RESPONSIVE ALIGN -->
-    <p>Right aligned on small or larger</p>
-    <p>Right aligned on medium or larger</p>
-    <p>Right aligned on large or larger</p>
-    <p>Right aligned on xl or larger</p>
-
-    <p>Left aligned text on small or larger</p>
-    <p>Left aligned text on medium or larger</p>
-    <p>Left aligned text on large or wider</p>
-    <p>Left aligned text on extra large or wider</p>
-
-    <p class="text-sm-center">Center aligned text on small or larger</p>
-    <p class="text-md-center">Center aligned text on medium or larger</p>
-    <p>Center aligned text on large or wider</p>
-    <p>Center aligned text on extra large or wider</p>
-
-    <br><br>
-
-    <!-- VERTICAL ALIGNMENT -->
-    <span class="align-baseline">baseline</span>
-    <span class="align-top">top</span>
-    <span class="align-bottom">bottom</span>
-    <span class="align-middle">middle</span>
-    <span class="align-text-top">text-top</span>
-    <span class="align-text-bottom">text-bottom</span>
-
-    <br><br>
-
-    <!-- TURN BLOCK TO INLINE -->
-    <h1>Hello</h1>
-    <h1>Goodbye</h1>
-
-    <br><br>
-
-    <!-- TURN INLINE TO BLOCK -->
-    <span>Block</span>
-
-    <br><br>
-
-    <!-- INLINE BLOCK -->
-    <div>
-      <h3>Hello</h3>
-      This is inline
+    <!-- MODAL -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal Title</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus unde veniam harum magnam molestias dignissimos omnis architecto, quod, obcaecati dolorum debitis dolore porro qui, iusto quo accusantium voluptates pariatur illo.
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <h3>Hello</h3>
-      This is inline
+
+    <br><br>
+
+    <!-- LOGIN MODAL TRIGGER -->
+    <button class="btn btn-info" data-toggle="modal" data-target="#loginModal">Login</button>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal" id="loginModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" class="form-control">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary" data-dismiss="modal">Login</button>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 
   <div style="margin-top:500px;"></div>

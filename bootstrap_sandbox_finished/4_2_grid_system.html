@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h1 class="display-3 text-center my-4">Text Alignment & Display</h1>
+    <h1 class="display-3 text-center my-4">Grid System</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -79,67 +79,99 @@
   </header>
 
   <div class="container">
-    <!--########################START HERE#########################-->
+    <!--####################START HERE####################-->
 
-    <!-- JUSTIFY -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ad deleniti, placeat cumque, maiores fugiat tenetur ea voluptas voluptatem odio odit, dicta. Eaque reiciendis sed placeat omnis doloribus, corrupti eius.</p>
-
-    <br><br>
-
-    <!-- ALIGNMENT -->
-    <p>Text aligned left</p>
-    <p>Text aligned center</p>
-    <p>Text aligned right</p>
-
-    <!-- RESPONSIVE ALIGN -->
-    <p>Right aligned on small or larger</p>
-    <p>Right aligned on medium or larger</p>
-    <p>Right aligned on large or larger</p>
-    <p>Right aligned on xl or larger</p>
-
-    <p>Left aligned text on small or larger</p>
-    <p>Left aligned text on medium or larger</p>
-    <p>Left aligned text on large or wider</p>
-    <p>Left aligned text on extra large or wider</p>
-
-    <p class="text-sm-center">Center aligned text on small or larger</p>
-    <p class="text-md-center">Center aligned text on medium or larger</p>
-    <p>Center aligned text on large or wider</p>
-    <p>Center aligned text on extra large or wider</p>
-
-    <br><br>
-
-    <!-- VERTICAL ALIGNMENT -->
-    <span class="align-baseline">baseline</span>
-    <span class="align-top">top</span>
-    <span class="align-bottom">bottom</span>
-    <span class="align-middle">middle</span>
-    <span class="align-text-top">text-top</span>
-    <span class="align-text-bottom">text-bottom</span>
-
-    <br><br>
-
-    <!-- TURN BLOCK TO INLINE -->
-    <h1>Hello</h1>
-    <h1>Goodbye</h1>
-
-    <br><br>
-
-    <!-- TURN INLINE TO BLOCK -->
-    <span>Block</span>
-
-    <br><br>
-
-    <!-- INLINE BLOCK -->
-    <div>
-      <h3>Hello</h3>
-      This is inline
+    <!-- RESPONSIVE GRID -->
+    <div class="row">
+      <div class="col-sm-6 col-md-8 col-lg-9 col-xl-10" style="border:1px solid #333">
+        <ul>
+          <li>6 column on small screens</li>
+          <li>8 column on medium screen</li>
+          <li>9 column on large screen</li>
+          <li>10 column on xlarge screen</li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="border:1px solid #333">
+        <ul>
+          <li>6 column on small screens</li>
+          <li>8 column on medium screen</li>
+          <li>3 column on large screen</li>
+          <li>2 column on xlarge screen</li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h3>Hello</h3>
-      This is inline
+
+    <!-- EQUAL WIDTH -->
+    <div class="row">
+      <div class="col" style="border:1px solid #333">Equal Width</div>
+      <div class="col" style="border:1px solid #333">Equal Width</div>
+      <div class="col" style="border:1px solid #333">Equal Width</div>
+      <div class="col" style="border:1px solid #333">Equal Width</div>
     </div>
-  </div>
+
+    <!-- EQUAL WIDTH MULTI ROW -->
+    <div class="row">
+      <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+      <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+      <div class="w-100"></div>
+      <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+      <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+    </div>
+
+    <!-- AUTO LAYOUT -->
+    <div class="row">
+      <div class="col" style="border:1px solid #333">Auto Layout</div>
+      <div class="col-6" style="border:1px solid #333">Auto Layout</div>
+      <div class="col-4" style="border:1px solid #333">Auto Layout</div>
+    </div>
+
+    <!-- EQUAL WIDTH STACKED -->
+    <div class="row">
+      <div class="col-sm" style="border:1px solid #333">Equal Width Stack</div>
+      <div class="col-sm" style="border:1px solid #333">Equal Width Stack</div>
+      <div class="col-sm" style="border:1px solid #333">Equal Width Stack</div>
+    </div>
+
+    <!-- ORDERING -->
+    <div class="row">
+      <div class="col order-3" style="border:1px solid #333">
+        First
+      </div>
+      <div class="col order-2" style="border:1px solid #333">
+        Second
+      </div>
+      <div class="col order-1" style="border:1px solid #333">
+        Third
+      </div>
+    </div>
+
+    <!-- OFFSETTING -->
+    <div class="row">
+      <div class="col-md-4" style="border:1px solid #333">4 col</div>
+      <div class="col-md-4 ml-auto" style="border:1px solid #333">4 col offset 4</div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 ml-auto" style="border:1px solid #333">3 col offset 3</div>
+      <div class="col-md-3 ml-auto" style="border:1px solid #333">3 col offset 3</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 m-auto" style="border:1px solid #333">6 col offset 3</div>
+    </div>
+
+    <!-- NESTING -->
+    <div class="row">
+      <div class="col-sm-9" style="border:1px solid #333">
+        Level 1: .col-sm-9
+        <div class="row">
+          <div class="col-sm-6" style="border:1px solid red">
+            Level 2: .col-8 .col-sm-6
+          </div>
+          <div class="col-sm-6" style="border:1px solid red">
+            Level 2: .col-4 .col-sm-6
+          </div>
+        </div>
+      </div>
+    </div>
 
   <div style="margin-top:500px;"></div>
 

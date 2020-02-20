@@ -6,10 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <title>Bootstrap Sandbox</title>
+  <style>
+        .row-hl{
+            background:#f4f4f4;
+            height:150px;
+        }
+
+        .item-hl{
+            border:1px solid #333;
+        }
+    </style>
 </head>
 <body>
   <header>
-    <h1 class="display-3 text-center my-4">Text Alignment & Display</h1>
+    <h1 class="display-3 text-center my-4">Auto Margins & Wrapping</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -79,66 +89,95 @@
   </header>
 
   <div class="container">
-    <!--########################START HERE#########################-->
+    <!--#####################START HERE######################-->
 
-    <!-- JUSTIFY -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ad deleniti, placeat cumque, maiores fugiat tenetur ea voluptas voluptatem odio odit, dicta. Eaque reiciendis sed placeat omnis doloribus, corrupti eius.</p>
-
-    <br><br>
-
-    <!-- ALIGNMENT -->
-    <p>Text aligned left</p>
-    <p>Text aligned center</p>
-    <p>Text aligned right</p>
-
-    <!-- RESPONSIVE ALIGN -->
-    <p>Right aligned on small or larger</p>
-    <p>Right aligned on medium or larger</p>
-    <p>Right aligned on large or larger</p>
-    <p>Right aligned on xl or larger</p>
-
-    <p>Left aligned text on small or larger</p>
-    <p>Left aligned text on medium or larger</p>
-    <p>Left aligned text on large or wider</p>
-    <p>Left aligned text on extra large or wider</p>
-
-    <p class="text-sm-center">Center aligned text on small or larger</p>
-    <p class="text-md-center">Center aligned text on medium or larger</p>
-    <p>Center aligned text on large or wider</p>
-    <p>Center aligned text on extra large or wider</p>
-
-    <br><br>
-
-    <!-- VERTICAL ALIGNMENT -->
-    <span class="align-baseline">baseline</span>
-    <span class="align-top">top</span>
-    <span class="align-bottom">bottom</span>
-    <span class="align-middle">middle</span>
-    <span class="align-text-top">text-top</span>
-    <span class="align-text-bottom">text-bottom</span>
-
-    <br><br>
-
-    <!-- TURN BLOCK TO INLINE -->
-    <h1>Hello</h1>
-    <h1>Goodbye</h1>
-
-    <br><br>
-
-    <!-- TURN INLINE TO BLOCK -->
-    <span>Block</span>
-
-    <br><br>
-
-    <!-- INLINE BLOCK -->
-    <div>
-      <h3>Hello</h3>
-      This is inline
+    <!-- MR-AUTO -->
+    <div class="d-flex row-hl">
+        <div class="mr-auto p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
     </div>
-    <div>
-      <h3>Hello</h3>
-      This is inline
+
+    <br><br>
+
+    <!-- ML-AUTO -->
+    <div class="d-flex row-hl">
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="ml-auto p-2 item-hl">Flex item</div>
     </div>
+
+    <br><br>
+
+    <!-- MB-AUTO -->
+    <div class="d-flex flex-column row-hl">
+        <div class="mb-auto p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+    </div>
+
+    <br><br>
+
+    <!-- MT-AUTO -->
+    <div class="d-flex flex-column row-hl">
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="mt-auto p-2 item-hl">Flex item</div>
+    </div>
+
+    <br><br>
+
+    <!-- NO WRAP -->
+    <div class="d-flex flex-nowrap row-hl">
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+        <div class="p-2 item-hl">Flex item</div>
+
+    </div>
+
+    <br><br>
+
+    <!-- WRAP -->
+    <div class="d-flex flex-wrap row-hl">
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+      <div class="p-2 item-hl">Flex item</div>
+    </div>
+
+    <br><br>
+
+    <!-- ORDERING -->
+    <div class="d-flex row-hl">
+      <div class="order-3 p-2 item-hl">First flex item</div>
+      <div class="order-2 p-2 item-hl">Second flex item</div>
+      <div class="order-1 p-2 item-hl">Third flex item</div>
+    </div>
+
+
   </div>
 
   <div style="margin-top:500px;"></div>
